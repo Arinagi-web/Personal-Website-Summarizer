@@ -1,0 +1,9 @@
+scrapy
+playwright
+httpx
+beautifulsoup4
+openpyxl
+language-tool-python
+tqdm
+pytest
+pytest-asyncio
