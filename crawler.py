@@ -3,9 +3,13 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from urllib.parse import urlparse
 from time import perf_counter
-
+# pyrefly: ignore [missing-import]
 import scrapy
+
+# pyrefly: ignore [missing-import]
 from scrapy.crawler import CrawlerProcess
+
+# pyrefly: ignore [missing-import]
 from scrapy.exceptions import CloseSpider
 
 from config import DEFAULT_CONFIG
@@ -245,6 +249,7 @@ def crawl(
         command,
         capture_output=True,
         text=True,
+        encoding="utf-8",
         check=False,
     )
 

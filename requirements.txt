@@ -7,3 +7,5 @@ language-tool-python
 tqdm
 pytest
 pytest-asyncio
+trafilatura
+python-dotenv

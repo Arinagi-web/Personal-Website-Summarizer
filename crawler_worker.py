@@ -4,6 +4,7 @@ import json
 import sys
 
 from time import perf_counter
+# pyrefly: ignore [missing-import]
 from scrapy.crawler import CrawlerProcess
 
 from crawler import CrawlResult, WebsiteSpider
@@ -108,6 +109,8 @@ def run_worker(
         flush=True,
     )
 
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     print(json_output)
 
 

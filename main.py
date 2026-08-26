@@ -1,0 +1,99 @@
+from __future__ import annotations
+
+import argparse
+import sys
+from urllib.parse import urlparse
+
+from config import validate_config, ConfigurationError
+from Summarizer.report import format_report
+from Summarizer.run import run
+from Summarizer.site import summarize_site
+from crawler import crawl
+
+
+def main() -> None:
+    """Run the summarizer from the command line."""
+    
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+        
+    parser = argparse.ArgumentParser(
+        description="Summarize a website."
+    )
+    
+    parser.add_argument(
+        "url",
+        help="Website URL to summarize.",
+    )
+    
+    parser.add_argument(
+        "--browser",
+        action="store_true",
+        help="Use Playwright instead of Scrapy. Use for JS-heavy pages.",
+    )
+    
+    parser.add_argument(
+        "--pages",
+        type=int,
+        default=1,
+        help="Maximum number of pages to crawl (default 1).",
+    )
+
+    args = parser.parse_args()
+
+    try:
+        parsed_url = urlparse(args.url)
+        if not parsed_url.scheme or not parsed_url.netloc:
+            print(f"Invalid URL format: {args.url}. Must start with http:// or https://")
+            sys.exit(1)
+
+        validate_config()
+
+        if args.pages > 1:
+            results = summarize_site(
+                site_url=args.url,
+                max_pages=args.pages,
+                max_depth=None,
+            )
+            for summary, metadata in results:
+                print(format_report(summary, metadata, summary.url))
+                print("\n")
+        else:
+            print(f"🔍 Fetching {args.url}...")
+            if args.browser:
+                print("Warning: --browser flag is not yet implemented (Phase 8). Falling back to Scrapy.")
+
+            crawl_result = crawl(
+                args.url,
+                max_pages=1,
+                max_depth=0,
+            )
+
+            if args.url not in crawl_result.pages:
+                print(f"Failed to fetch {args.url}")
+                sys.exit(1)
+                
+            html = crawl_result.pages[args.url]
+            
+            print("📄 Extracting content...")
+            
+            summary, metadata = run(args.url, html)
+            
+            if not summary.success:
+                print("Warning: Extraction or summarization failed.")
+            else:
+                print(f"Extraction method: {metadata.extraction_method}, Char count: {len(html)}")
+                print(f"🤖 Summarizing with {summary.model_used}...")
+
+            print(format_report(summary, metadata, args.url))
+
+    except ConfigurationError as exc:
+        print(f"Configuration Error: {exc}")
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\nProcess interrupted by user. Exiting cleanly.")
+        sys.exit(130)
+
+
+if __name__ == "__main__":
+    main()
