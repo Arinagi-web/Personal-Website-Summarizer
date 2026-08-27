@@ -5,10 +5,12 @@ import sys
 from urllib.parse import urlparse
 
 from config import validate_config, ConfigurationError
+from models import SummaryResult, PageMetadata
 from Summarizer.report import format_report
 from Summarizer.run import run
 from Summarizer.site import summarize_site
 from crawler import crawl
+from browser import fetch_with_browser
 
 
 def main() -> None:
@@ -60,20 +62,45 @@ def main() -> None:
                 print("\n")
         else:
             print(f"🔍 Fetching {args.url}...")
+
             if args.browser:
-                print("Warning: --browser flag is not yet implemented (Phase 8). Falling back to Scrapy.")
-
-            crawl_result = crawl(
-                args.url,
-                max_pages=1,
-                max_depth=0,
-            )
-
-            if args.url not in crawl_result.pages:
-                print(f"Failed to fetch {args.url}")
-                sys.exit(1)
-                
-            html = crawl_result.pages[args.url]
+                print("🌐 Using browser (Playwright)...")
+                html = fetch_with_browser(args.url)
+                if not html:
+                    result = SummaryResult(
+                        url=args.url,
+                        error="Browser could not fetch this page. "
+                              "The site may have strong bot "
+                              "protection or require login.",
+                    )
+                    print(format_report(
+                        result,
+                        PageMetadata(url=args.url),
+                        args.url,
+                    ))
+                    sys.exit(1)
+            else:
+                crawl_result = crawl(
+                    args.url,
+                    max_pages=1,
+                    max_depth=0,
+                )
+    
+                if args.url not in crawl_result.pages:
+                    result = SummaryResult(
+                        url=args.url,
+                        error="Page could not be fetched. "
+                              "The site may be blocking automated "
+                              "requests. Try the --browser flag.",
+                    )
+                    print(format_report(
+                        result,
+                        PageMetadata(url=args.url),
+                        args.url,
+                    ))
+                    sys.exit(1)
+    
+                html = crawl_result.pages[args.url]
             
             print("📄 Extracting content...")
             
@@ -82,7 +109,7 @@ def main() -> None:
             if not summary.success:
                 print("Warning: Extraction or summarization failed.")
             else:
-                print(f"Extraction method: {metadata.extraction_method}, Char count: {len(html)}")
+                print(f"Extraction method: {metadata.extraction_method}, Words: {metadata.word_count}")
                 print(f"🤖 Summarizing with {summary.model_used}...")
 
             print(format_report(summary, metadata, args.url))
