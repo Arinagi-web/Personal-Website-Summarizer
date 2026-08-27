@@ -1,265 +1,127 @@
 # Website Summarizer
 
-A Python-based website analysis and summarization project that crawls a website, extracts its content and structure, and prepares the foundation for generating a clear, useful summary of the entire site.
+A standalone utility that accepts a webpage URL and returns a concise AI-generated summary and key points. Built in Python using Scrapy, Playwright, BeautifulSoup, and the Groq API.
 
-> **Status:** Early development — crawler and analysis foundation are in place; summarization capabilities are being built.
-
-## Overview
-
-Website Summarizer is designed to turn a website URL into an understandable overview of the website.
-
-Instead of manually visiting every page, the application will:
-
-1. Crawl the website.
-2. Discover relevant pages and links.
-3. Extract useful page content.
-4. Analyze the website's structure and content.
-5. Generate summaries for individual pages.
-6. Combine those results into an overall website summary.
-7. Present the information as a structured report.
-
-### Planned output
-
-A completed summary will provide information such as:
-
-* Website purpose
-* Target audience
-* Main products or services
-* Important topics and keywords
-* Site structure and navigation
-* Individual page summaries
-* Important links and information
-* Overall website summary
+## Features
+- Static page summarization via Scrapy
+- JS-rendered and bot-protected page support via Playwright
+- HTML noise removal (nav, ads, sidebars, scripts)
+- Content ranking to maximize AI summary quality
+- Groq API integration (free tier, llama-3.1-8b-instant)
+- Structured output: summary + 6 key points
+- Swappable AI provider via config
+- Clean terminal report with metadata footer
+- Handles long pages, inaccessible pages, extraction failures
 
 ## Architecture
 
-The project is built around the existing crawling infrastructure:
-
-```text
-                    Website URL
-                         │
-                         ▼
-                    ┌─────────┐
-                    │ Crawler │
-                    └────┬────┘
-                         │
-                         ▼
-                Discovered Pages
-                         │
-                         ▼
-              ┌──────────────────┐
-              │ Content Extractor │
-              └────────┬─────────┘
-                       │
-                       ▼
-              ┌──────────────────┐
-              │ Website Analyzer │
-              └────────┬─────────┘
-                       │
-                       ▼
-                ┌─────────────┐
-                │ Summarizer  │
-                └──────┬──────┘
-                       │
-                       ▼
-                ┌─────────────┐
-                │    Report   │
-                └─────────────┘
-```
+URL → Crawler (Scrapy / Playwright)
+    → cleaner.py (strip HTML noise)
+    → extractor.py (extract text)
+    → ranker.py (rank + cap at 24k chars)
+    → analyzer.py (metadata)
+    → summarizer.py (Groq API)
+    → report.py (terminal output)
 
 ## Project Structure
 
-```text
 Website-Summarizer/
-│
 ├── Summarizer/
-│   ├── __init__.py
-│   ├── analyzer.py
+│   ├── cleaner.py
 │   ├── extractor.py
+│   ├── ranker.py
+│   ├── analyzer.py
+│   ├── summarizer.py
+│   ├── groq_provider.py
 │   ├── report.py
-│   └── summarizer.py
-│
+│   ├── run.py
+│   └── site.py
+├── utils/
+├── tests/
 ├── browser.py
 ├── config.py
 ├── crawler.py
-├── crawler_worker.py
+├── main.py
 ├── models.py
-│
-├── utils/
-│   ├── __init__.py
-│   ├── logging.py
-│   └── urls.py
-│
-├── requirements.txt
-└── README.md
-```
+└── requirements.txt
 
-### Core components
+## Setup
 
-#### `crawler.py`
-
-Responsible for discovering and collecting pages from a website while respecting crawl boundaries and configured limits.
-
-#### `crawler_worker.py`
-
-Supports the crawling workflow and page processing.
-
-#### `browser.py`
-
-Provides browser-related functionality for websites that require rendered-page access.
-
-#### `models.py`
-
-Contains the data structures used to represent crawled pages and analysis results.
-
-#### `Summarizer/extractor.py`
-
-Responsible for converting raw HTML into clean, useful website content.
-
-#### `Summarizer/analyzer.py`
-
-Analyzes extracted content and identifies relationships, structure, and important information across the website.
-
-#### `Summarizer/summarizer.py`
-
-The main summarization layer. This will transform analyzed website information into concise human-readable summaries.
-
-#### `Summarizer/report.py`
-
-Responsible for assembling the analysis and summaries into a structured final report.
-
-## Goals
-
-The project aims to provide a summarization system that can understand a website as a **whole**, rather than simply summarizing one HTML page.
-
-The long-term goal is to make the workflow as simple as:
-
-```text
-Enter URL
-   ↓
-Crawl
-   ↓
-Analyze
-   ↓
-Summarize
-   ↓
-Understand the website
-```
-
-## Development
-
-### Requirements
-
-* Python 3.x
-* A virtual environment is recommended
+### Prerequisites
+- Python 3.11+
+- A free Groq API key from console.groq.com
 
 ### Installation
+  git clone <repo>
+  cd Website-Summarizer
+  python -m venv .venv
+  .venv\Scripts\activate  # Windows
+  pip install -r requirements.txt
+  playwright install chromium
 
-Clone the repository:
+### Configuration
+  Copy .env.example to .env
+  Add your GROQ_API_KEY to .env
 
-```bash
-git clone https://github.com/Arinagi-web/Website-Summarizer.git
-cd Website-Summarizer
-```
+## Usage
 
-Create a virtual environment:
+### Summarize a single page (static):
+  python main.py https://en.wikipedia.org/wiki/Flat-file_database
 
-```bash
-python -m venv .venv
-```
+### Summarize a JS-rendered or bot-protected page:
+  python main.py https://www.apple.com/iphone/ --browser
 
-Activate it on Windows:
+### Summarize multiple pages from a site:
+  python main.py https://example.com --pages 5
 
-```powershell
-.venv\Scripts\Activate.ps1
-```
+## Example Output
 
-Install dependencies:
+  ═══════════════════════════════════════════
+  WEBSITE SUMMARY
+  URL   : https://en.wikipedia.org/wiki/Flat-file_database
+  Title : Flat-file database - Wikipedia
+  ═══════════════════════════════════════════
 
-```bash
-pip install -r requirements.txt
-```
+  SUMMARY
+  ───────
+  A flat-file database stores each record independently...
 
-## Current Development Plan
+  KEY POINTS
+  ──────────
+  • Each record is stored as a semantically independent unit...
+  • Records use delimiter-separated or fixed-width formats...
+  • [4 more points]
 
-### Phase 1 — Crawling Foundation
+  ───────────────────────────────────────────
+  Words analyzed : 1512
+  Extraction     : beautifulsoup
+  Model          : groq
+  Chunked        : No
+  ───────────────────────────────────────────
 
-* [x] Website crawling
-* [x] Page discovery
-* [x] URL handling
-* [x] Crawl result models
-* [x] Browser support
+## Tested Sites
 
-### Phase 2 — Content Understanding
+| Site | Type | Method | Status |
+|------|------|--------|--------|
+| Wikipedia | Content page | Scrapy | ✅ |
+| DPU University | Institutional homepage | Scrapy | ✅ |
+| Python Docs | Technical documentation | Scrapy | ✅ |
+| Martinfowler | Long-form blog | Scrapy | ✅ |
+| Apple iPhone | JS-rendered | Playwright | ✅ |
+| BBC News | JS-rendered | Playwright | ✅ |
 
-* [ ] Clean HTML extraction
-* [ ] Heading extraction
-* [ ] Paragraph extraction
-* [ ] Navigation analysis
-* [ ] Metadata extraction
-* [ ] Content deduplication
+## Configuration
 
-### Phase 3 — Website Analysis
+Key settings in config.py:
+- max_content_chars: 24000 (chars sent to AI)
+- model: llama-3.1-8b-instant (fast, free Groq model)
+- temperature: 0.3 (factual, low creativity)
+- chunk_size_chars: 24000 (chunking threshold)
 
-* [ ] Page classification
-* [ ] Site structure analysis
-* [ ] Important-content detection
-* [ ] Key topic extraction
-* [ ] Website purpose detection
-* [ ] Target-audience analysis
+To switch AI provider, update AIConfig in config.py.
 
-### Phase 4 — Summarization
-
-* [ ] Individual page summaries
-* [ ] Website-wide summary
-* [ ] Key information extraction
-* [ ] Structured summary generation
-
-### Phase 5 — Presentation
-
-* [ ] CLI interface
-* [ ] Web interface
-* [ ] Interactive website report
-* [ ] Crawl progress display
-* [ ] Exportable reports
-
-## Design Philosophy
-
-The project separates **crawling**, **content extraction**, **analysis**, and **summarization** rather than sending raw website HTML directly to a language model.
-
-This allows each stage to be tested independently and makes the system easier to optimize and extend.
-
-```text
-Raw Website
-    ↓
-Crawl
-    ↓
-Raw HTML
-    ↓
-Clean Content
-    ↓
-Structured Data
-    ↓
-Analysis
-    ↓
-Summary
-```
-
-## Future Possibilities
-
-The architecture can eventually support additional website intelligence features, including:
-
-* Website structure visualization
-* Automatic page categorization
-* SEO-oriented content analysis
-* Accessibility insights
-* Technology detection
-* Broken-link detection
-* Content quality analysis
-* Website comparison
-* Automatic documentation generation
-* AI-powered question answering about a website
+## Running Tests
+  pytest tests/ -v
 
 ## License
-
-No license has been selected yet. This project is currently under private development.
+MIT

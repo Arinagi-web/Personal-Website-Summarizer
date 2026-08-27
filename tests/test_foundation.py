@@ -95,14 +95,14 @@ def test_default_config_loads_without_error() -> None:
 def test_default_extraction_config_values() -> None:
     """Extraction defaults should match the project specification."""
     assert DEFAULT_CONFIG.extraction.min_content_length == 100
-    assert DEFAULT_CONFIG.extraction.max_content_chars == 12000
+    assert DEFAULT_CONFIG.extraction.max_content_chars == 24000
     assert DEFAULT_CONFIG.extraction.max_sections_to_rank == 20
 
 
 def test_default_ai_config_values() -> None:
     """AI defaults should match the project specification."""
-    assert DEFAULT_CONFIG.ai.max_output_tokens == 500
-    assert DEFAULT_CONFIG.ai.chunk_size_chars == 8000
+    assert DEFAULT_CONFIG.ai.max_output_tokens == 1500
+    assert DEFAULT_CONFIG.ai.chunk_size_chars == 24000
     assert DEFAULT_CONFIG.ai.temperature == 0.3
     assert DEFAULT_CONFIG.ai.request_timeout == 30.0
 

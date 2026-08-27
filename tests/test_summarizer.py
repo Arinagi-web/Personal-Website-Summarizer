@@ -1,19 +1,21 @@
 from Summarizer.summarizer import summarize_page
+from unittest.mock import patch
 
 
-def test_summarizer_returns_summary_for_meaningful_content():
+@patch("Summarizer.summarizer.summarize_with_groq")
+def test_summarizer_returns_summary_for_meaningful_content(mock_summarize):
+    mock_summarize.return_value = ("Test summary.", ["Point 1.", "Point 2."])
     result = summarize_page(
-        title="About Our Company",
-        main_topic="About Our Company",
-        key_topics=["Our Mission"],
-        text=(
-            "We build useful software for businesses. "
-            "Our mission is to make complex technology easier to use."
-        ),
+        title="Test Page",
+        main_topic="Test Topic",
+        key_topics=["topic1", "topic2"],
+        text="Valid text that is long enough.",
+        url="https://example.com"
     )
 
-    assert result.summary
     assert result.success is True
+    assert result.summary == "Test Topic: Test summary."
+    assert result.key_points == ["Point 1.", "Point 2."]
 
 
 def test_summarizer_preserves_page_url():
@@ -65,15 +67,18 @@ def test_summarizer_does_not_require_api_call_for_empty_content():
     assert result.input_chars == 0
 
 
-def test_summarizer_records_model_used():
+@patch("Summarizer.summarizer.summarize_with_groq")
+def test_summarizer_records_model_used(mock_summarize):
+    mock_summarize.return_value = ("Test summary.", ["Point 1.", "Point 2."])
     result = summarize_page(
         title="Test Page",
-        main_topic="Test Page",
-        key_topics=[],
+        main_topic="Test Topic",
+        key_topics=["topic1", "topic2"],
         text="This page contains useful information.",
+        url="https://example.com"
     )
 
-    assert result.model_used != ""
+    assert result.model_used == "groq"
 
 
 def test_summarizer_returns_key_points():

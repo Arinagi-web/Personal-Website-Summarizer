@@ -67,7 +67,9 @@ def test_crawler_respects_max_pages() -> None:
     assert len(result.discovered_urls) <= 3
 
 
-def test_crawler_respects_max_depth() -> None:
+def test_crawler_respects_max_depth(
+    require_local_server,
+) -> None:
     result = crawl(
         LOCAL_SITE,
         max_pages=20,
@@ -76,7 +78,9 @@ def test_crawler_respects_max_depth() -> None:
 
     assert result.pages_discovered == 1
 
-def test_crawler_respects_robots_txt() -> None:
+def test_crawler_respects_robots_txt(
+    require_local_server,
+) -> None:
     robots_path = Path("test_site") / "robots.txt"
 
     robots_path.write_text(
@@ -104,7 +108,9 @@ def test_crawler_respects_robots_txt() -> None:
         if robots_path.exists():
             robots_path.unlink()
 
-def test_crawler_discovers_local_pages() -> None:
+def test_crawler_discovers_local_pages(
+    require_local_server,
+) -> None:
     result = crawl(
         LOCAL_SITE,
         max_pages=20,
@@ -115,7 +121,9 @@ def test_crawler_discovers_local_pages() -> None:
     assert LOCAL_SITE in result.discovered_urls
     assert "http://127.0.0.1:8000/about.html" in result.discovered_urls
 
-def test_crawler_retains_page_html() -> None:
+def test_crawler_retains_page_html(
+    require_local_server,
+) -> None:
     result = crawl(
         LOCAL_SITE,
         max_pages=20,
