@@ -47,6 +47,9 @@ def _parse_groq_response(
 def summarize_with_groq(
     text: str,
     url: str = "",
+    summary_sentences: int | None = None,
+    summary_words: int | None = None,
+    key_points: int | None = None,
 ) -> tuple[str, list[str]]:
     """
     Summarize text using the Groq API.
@@ -57,24 +60,39 @@ def summarize_with_groq(
     if not config.api_key:
         raise ValueError("GROQ_API_KEY is missing.")
 
+    if summary_words is not None:
+        summary_instruction = f"approximately {summary_words} words"
+    elif summary_sentences is not None:
+        summary_instruction = f"{summary_sentences} sentences"
+    else:
+        summary_instruction = "3-5 sentences"
+
+    if key_points is not None:
+        points_count = key_points
+    else:
+        points_count = DEFAULT_CONFIG.ai.default_key_points
+
+    points_template = "\n".join(
+        f"- <key point {i}>"
+        for i in range(1, points_count + 1)
+    )
+
     system = (
         "You are a precise webpage summarizer. "
-        "Always respond in this exact format and nothing else:\n\n"
-        "SUMMARY: <3-5 sentences covering the main definition, "
-        "key concepts, historical context if present, and primary "
-        "examples from the content>\n\n"
-        "KEY POINTS:\n"
-        "- <key point 1>\n"
-        "- <key point 2>\n"
-        "- <key point 3>\n"
-        "- <key point 4>\n"
-        "- <key point 5>\n"
-        "- <key point 6>\n\n"
+        "Always respond in this exact format and "
+        "nothing else:\n\n"
+        f"SUMMARY: <{summary_instruction} covering "
+        "the main definition, key concepts, historical "
+        "context if present, and primary examples "
+        "from the content>\n\n"
+        f"KEY POINTS:\n"
+        f"{points_template}\n\n"
         "Rules:\n"
         "- Be factual, use only the provided content\n"
         "- Each key point must be a complete specific sentence\n"
         "- Do not number the key points\n"
-        "- Do not add text before SUMMARY: or after last point"
+        "- Do not add text before SUMMARY: or after "
+        "last point"
     )
 
     user = f"Summarize this webpage content.\nURL: {url}\n\n{text}"

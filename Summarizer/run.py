@@ -13,6 +13,9 @@ logger = get_logger(__name__)
 def run(
     url: str,
     html: str,
+    summary_sentences: int | None = None,
+    summary_words: int | None = None,
+    key_points: int | None = None,
 ) -> tuple[SummaryResult, PageMetadata]:
     """Orchestrate the full pipeline for ONE page."""
 
@@ -48,6 +51,9 @@ def run(
             key_topics=analysis.key_topics,
             text=ranked_text,
             url=url,
+            summary_sentences=summary_sentences,
+            summary_words=summary_words,
+            key_points=key_points,
         )
 
         word_count = extracted.word_count
@@ -55,7 +61,7 @@ def run(
             url=url,
             title=analysis.title,
             word_count=word_count,
-            extraction_method="beautifulsoup"
+            extraction_method=extracted.extraction_method
         )
 
         return summary, metadata

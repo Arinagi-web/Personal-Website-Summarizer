@@ -239,6 +239,9 @@ def summarize_page(
     key_topics: list[str],
     text: str,
     url: str = "",
+    summary_sentences: int | None = None,
+    summary_words: int | None = None,
+    key_points: int | None = None,
 ) -> SummaryResult:
     """Orchestrate AI summarization with deterministic fallback."""
 
@@ -260,7 +263,13 @@ def summarize_page(
             was_chunked = len(chunks) > 1
 
             if not was_chunked:
-                summary_text, key_points = summarize_with_groq(clean_text, url)
+                summary_text, key_points_result = summarize_with_groq(
+                    clean_text,
+                    url,
+                    summary_sentences=summary_sentences,
+                    summary_words=summary_words,
+                    key_points=key_points,
+                )
             else:
                 chunk_summaries = []
                 import time
@@ -272,7 +281,13 @@ def summarize_page(
                 
                 synthesis_text = "\n\n".join(chunk_summaries)
                 time.sleep(12)
-                summary_text, key_points = summarize_with_groq(synthesis_text, url)
+                summary_text, key_points_result = summarize_with_groq(
+                    synthesis_text,
+                    url,
+                    summary_sentences=summary_sentences,
+                    summary_words=summary_words,
+                    key_points=key_points,
+                )
 
             topic = main_topic.strip()
             if topic and not summary_text.startswith(topic):
@@ -281,7 +296,7 @@ def summarize_page(
             return SummaryResult(
                 url=url,
                 summary=summary_text,
-                key_points=key_points,
+                key_points=key_points_result,
                 model_used="groq",
                 input_chars=input_chars,
                 was_chunked=was_chunked,

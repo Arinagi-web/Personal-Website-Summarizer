@@ -54,6 +54,7 @@ class ExtractedPage:
     text: str = ""
     word_count: int = 0
     character_count: int = 0
+    extraction_method: str = "beautifulsoup"
 
 
 def _clean_text(value: str) -> str:
@@ -67,6 +68,88 @@ def _is_internal(url: str, base_url: str) -> bool:
     target_host = (urlparse(url).hostname or "").lower()
 
     return source_host == target_host
+
+
+def _extract_with_trafilatura(html: str) -> str:
+    """
+    Extract main content from HTML using trafilatura.
+
+    Uses trafilatura.extract() with these settings:
+    - include_comments=False
+    - include_tables=True
+    - no_fallback=False
+    - favor_precision=True
+    - include_formatting=False
+
+    Returns extracted text string.
+    Returns empty string if trafilatura returns None
+    or raises any exception.
+    Never raises — always returns a string.
+    """
+    try:
+        # pyrefly: ignore [missing-import]
+        import trafilatura
+        result = trafilatura.extract(
+            html,
+            include_comments=False,
+            include_tables=True,
+            no_fallback=False,
+            favor_precision=True,
+            include_formatting=False,
+        )
+        return result if result is not None else ""
+    except Exception:
+        return ""
+
+
+def _extract_with_beautifulsoup(
+    soup: BeautifulSoup,
+) -> str:
+    """
+    Extract main content text from a BeautifulSoup object.
+
+    Extract text from these elements in priority order:
+      article tag → main tag → div with class containing
+      'content' → div with class containing 'post' →
+      div with class containing 'entry' →
+      div with class containing 'article' → body tag
+
+    Use .get_text(separator=" ", strip=True) on the
+    chosen element.
+    Collapse multiple spaces and newlines into single space.
+    Return cleaned text string.
+    Return empty string if nothing found.
+    Never raises — always returns a string.
+    """
+    try:
+        def has_class_part(cls_list, part):
+            if not cls_list:
+                return False
+            if isinstance(cls_list, str):
+                return part in cls_list.lower()
+            return any(part in c.lower() for c in cls_list)
+
+        target = soup.find("article")
+        if not target:
+            target = soup.find("main")
+        if not target:
+            target = soup.find("div", class_=lambda c: has_class_part(c, "content"))
+        if not target:
+            target = soup.find("div", class_=lambda c: has_class_part(c, "post"))
+        if not target:
+            target = soup.find("div", class_=lambda c: has_class_part(c, "entry"))
+        if not target:
+            target = soup.find("div", class_=lambda c: has_class_part(c, "article"))
+        if not target:
+            target = soup.find("body")
+
+        if not target:
+            return ""
+
+        raw_text = target.get_text(separator=" ", strip=True)
+        return " ".join(raw_text.split())
+    except Exception:
+        return ""
 
 
 def extract_page_contents(
@@ -189,17 +272,30 @@ def extract_page_contents(
         if text:
             page.navigation_text.append(text)
 
-    # Main page text.
-    # Navigation is deliberately removed so navigation labels do not
-    # pollute the content sent to later summarization stages.
-    text_soup = BeautifulSoup(str(soup), "html.parser")
+    from config import DEFAULT_CONFIG
 
-    for element in text_soup(["nav", "script", "style", "noscript", "template"]):
-        element.decompose()
+    min_length = DEFAULT_CONFIG.extraction.min_content_length
 
-    page.text = _clean_text(
-        text_soup.get_text(" ", strip=True)
-    )
+    # Try trafilatura first on the original HTML
+    trafilatura_text = _extract_with_trafilatura(html)
+    trafilatura_words = len(trafilatura_text.split())
+
+    if trafilatura_words >= min_length:
+        # Use trafilatura result as main text
+        page.text = trafilatura_text
+        page.extraction_method = "trafilatura"
+    else:
+        # Fall back to BeautifulSoup
+        bs4_text = _extract_with_beautifulsoup(soup)
+        bs4_words = len(bs4_text.split())
+
+        if bs4_words >= min_length:
+            page.text = bs4_text
+            page.extraction_method = "beautifulsoup"
+        else:
+            # Both failed
+            page.text = bs4_text or trafilatura_text
+            page.extraction_method = "failed"
 
     page.word_count = len(page.text.split())
     page.character_count = len(page.text)

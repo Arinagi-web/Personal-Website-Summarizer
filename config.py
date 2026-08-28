@@ -59,6 +59,8 @@ class AIConfig:
     chunk_size_chars: int = 24000
     temperature: float = 0.3
     request_timeout: float = 30.0
+    default_summary_sentences: int = 3
+    default_key_points: int = 6
 
 
 @dataclass(slots=True)

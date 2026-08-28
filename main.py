@@ -41,12 +41,60 @@ def main() -> None:
         help="Maximum number of pages to crawl (default 1).",
     )
 
+    parser.add_argument(
+        "--summary-sentences",
+        type=int,
+        default=None,
+        help=(
+            "Number of sentences for the summary "
+            "(default: 3-5). "
+            "Cannot be used with --summary-words."
+        ),
+    )
+
+    parser.add_argument(
+        "--summary-words",
+        type=int,
+        default=None,
+        help=(
+            "Approximate word count for the summary "
+            "(default: 3-5 sentences). "
+            "Cannot be used with --summary-sentences."
+        ),
+    )
+
+    parser.add_argument(
+        "--key-points",
+        type=int,
+        default=None,
+        help="Number of key points to generate (default: 6).",
+    )
+
     args = parser.parse_args()
 
     try:
         parsed_url = urlparse(args.url)
         if not parsed_url.scheme or not parsed_url.netloc:
             print(f"Invalid URL format: {args.url}. Must start with http:// or https://")
+            sys.exit(1)
+
+        if args.summary_sentences and args.summary_words:
+            print(
+                "Error: --summary-sentences and "
+                "--summary-words cannot be used together."
+            )
+            sys.exit(1)
+
+        if args.summary_sentences is not None and args.summary_sentences < 1:
+            print("Error: --summary-sentences must be at least 1.")
+            sys.exit(1)
+
+        if args.summary_words is not None and args.summary_words < 10:
+            print("Error: --summary-words must be at least 10.")
+            sys.exit(1)
+
+        if args.key_points is not None and args.key_points < 1:
+            print("Error: --key-points must be at least 1.")
             sys.exit(1)
 
         validate_config()
@@ -104,7 +152,20 @@ def main() -> None:
             
             print("📄 Extracting content...")
             
-            summary, metadata = run(args.url, html)
+            if args.summary_sentences:
+                print(f"📝 Summary: {args.summary_sentences} sentences")
+            elif args.summary_words:
+                print(f"📝 Summary: ~{args.summary_words} words")
+            if args.key_points:
+                print(f"🔑 Key points: {args.key_points}")
+            
+            summary, metadata = run(
+                args.url,
+                html,
+                summary_sentences=args.summary_sentences,
+                summary_words=args.summary_words,
+                key_points=args.key_points,
+            )
             
             if not summary.success:
                 print("Warning: Extraction or summarization failed.")
