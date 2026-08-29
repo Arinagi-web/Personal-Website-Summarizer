@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/past-directors/",
+  "title": "Past Directors - Lady Irwin College, Delhi",
+  "summary": "Past Directors - Lady Irwin College, Delhi: The page provides basic information about Lady Irwin College in Delhi, including its address, contact details, and quick links for students. It lists the college’s operating hours (9:30 am to 5:00 pm) and highlights its affiliation with the University of Delhi. The college is accredited by NAAC with an A+ rating and holds a NIRF ranking of 31. Contact information includes a phone number (014836) and an admission enquiry line. The footer notes that the site is powered by WhiteCode and that all rights are reserved by the college.",
+  "key_points": [
+    "Lady Irwin College is located in Delhi and is affiliated with the University of Delhi.",
+    "The college’s operating hours are 9:30 am to 5:00 pm.",
+    "Contact information includes the phone number 014836.",
+    "The college is accredited by NAAC with an A+ rating.",
+    "It holds a NIRF ranking of 31.",
+    "The website is powered by WhiteCode and all rights are reserved by the college."
+  ],
+  "full_text": "",
+  "language": "English",
+  "is_english": true,
+  "word_count": 0,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:00:37.338252+00:00"
+}

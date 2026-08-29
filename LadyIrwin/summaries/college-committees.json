@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/college-committees/",
+  "title": "College Committees - Lady Irwin College, Delhi",
+  "summary": "College Committees - Lady Irwin College, Delhi: The page provides contact information for the college’s Anti‑Ragging Cell, outlining several ways to report incidents. Students can drop a written complaint, inform the nearest PCR van, or use the Anti‑Ragging/Himmat app. Email addresses proctor@du.ac.in and helpline@antiragging.in are listed for reporting, along with infocentre@du.ac.in. Phone numbers for the Joint Control Rooms at North and South Campuses, the UGC Anti‑Ragging Helpline, and the nearest police station on Barakhamba Road are also provided. The cell is responsible for handling ragging complaints and ensuring student safety.",
+  "key_points": [
+    "Drop written complaint in the complaint box.",
+    "Inform nearest PCR van.",
+    "Use Anti‑Ragging / Himmat App.",
+    "Email proctor@du.ac.in and helpline@antiragging.in.",
+    "Contact Joint Control Room (North Campus) at 24119832 and (South Campus) at 1800‑180‑5522.",
+    "Call U.G.C. Anti‑Ragging Helpline (Toll‑Free – 24X 7) 112 or nearest police station Barakhamba Road, New Delhi, Phone: 01123413800 27667221."
+  ],
+  "full_text": "| Sr. No | Name | Designation | Contact Details | \n|---|---|---|---|\n| 01 | Prof. Archna Kumar | Vice Principal | director@lic.du.ac.in | \n| 02 | Dr. Pooja Raizada | Hostel Warden | savita.sagar@lic.du.ac.in | \n| 03 | Ms. Mitali Yadav | Students' Association Advisor | vishakha.sambhav@lic.du.ac.in | \n| 04 | Dr. Desham K Reddy | Students' Association Advisor | nidhi.jaiswal@lic.du.ac.in | \n| 05 | Dr. Shanta Tirkey | SC/ST/OBC Nodal Officer | shanta.tirkey@lic.du.ac.in | \n| 06 | Ms. Tanisha Sharma | Students' Association President | – | \n| 07 | - | College Secretary | – | \n| 08 | Ms. Prachi Juneja | College Treasurer | – | \nNote: Above members constitutes the ANTI-RAGGING CELL of the college.\n| Inform | Contact | \n|---|---|\n| ● Drop written complaint in the complaint box ● Inform nearest PCR van ● Use Anti-Ragging / Himmat App ● Email: proctor@du.ac.in \\u0026nbsp; helpline@antiragging.in ● infocentre@du.ac.in ● Nearest Police Station: Barakhamba Road, New Delhi. Phone: 01123413800 | 27667221 Joint Control Room (North Campus) 24119832 Joint Control Room (South Campus) 1800-180-5522 U.G.C. Anti-Ragging Helpline (Toll-Free – 24X 7) 112 Police |",
+  "language": "English",
+  "is_english": true,
+  "word_count": 188,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:53:52.580102+00:00"
+}

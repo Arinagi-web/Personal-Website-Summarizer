@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/administration/",
+  "title": "Administration - Lady Irwin College, Delhi",
+  "summary": "Administration - Lady Irwin College, Delhi: The page provides basic administrative information for Lady Irwin College in Delhi, including contact details, visiting hours, and accreditation status. It lists the college’s address, phone number (014836), and indicates that the institution is part of the University of Delhi. The college holds an A+ NAAC accreditation and ranks 31 in the NIRF rankings. Quick links are available for students, site visitors, and admission enquiries, with office hours from 9:30 am to 5:00 pm. The page also notes that the content is © 2026 and powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College is located in Delhi and is part of the University of Delhi.",
+    "The college’s contact phone number is 014836 and it operates from 9:30 am to 5:00 pm.",
+    "It holds an A+ accreditation from NAAC and is ranked 31 in the NIRF rankings.",
+    "Quick links on the page direct users to student resources, site visitor information, and admission enquiries.",
+    "The website content is © 2026 and is powered by WhiteCode.",
+    "The page serves as an administrative hub for contact and basic institutional information."
+  ],
+  "full_text": "Administration Name Designation Prof. Neelima Asthana Director Prof. Manisha Sabharwal Public Information Officer (PIO) Prof. Aparna Khanna Bursar Mr. Sushant Kumar Administrative Officer Ms. Seema Das Section Officer (Administration) Mr. Ashok Kohli Sr. P.A. to Director Mr. Virendra Kumar Senior Assistant, Accounts Office Mr. Mangal Singh Pundir Assistant, Admin Office Mr. Himanshu Singh Assistant, Admin Office Mr. Naveen Singh Driver",
+  "language": "English",
+  "is_english": true,
+  "word_count": 60,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:53:02.750832+00:00"
+}

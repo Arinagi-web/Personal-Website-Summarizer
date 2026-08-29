@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/affiliation/",
+  "title": "Affiliation - Lady Irwin College, Delhi",
+  "summary": "Affiliation - Lady Irwin College, Delhi: Lady Irwin College is a constituent college of the University of Delhi located in Delhi, offering educational services with a contact number 014836. The college is accredited by NAAC with an A+ rating and ranked 31 in the NIRF rankings. It operates from 9:30 am to 5:00 pm and provides quick links for students and admission enquiries. The website includes contact details, visitor information, and a notice that it is powered by WhiteCode. The college’s official website is available for visits and admissions enquiries.",
+  "key_points": [
+    "Lady Irwin College is a constituent college of the University of Delhi located in Delhi.",
+    "The college is accredited by NAAC with an A+ rating.",
+    "It holds the 31st position in the NIRF rankings.",
+    "The college operates from 9:30 am to 5:00 pm.",
+    "Contact information for the college is 014836.",
+    "The website is powered by WhiteCode and includes quick links for students and admission enquiries."
+  ],
+  "full_text": "",
+  "language": "English",
+  "is_english": true,
+  "word_count": 0,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:53:19.789604+00:00"
+}

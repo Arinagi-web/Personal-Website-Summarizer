@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/home/",
+  "title": "Lady Irwin College, Delhi",
+  "summary": "Lady Irwin College, Delhi: Lady Irwin College is a constituent women’s college of the University of Delhi, specializing in Home Science education. Founded with just 11 students, it now hosts over 1300 students annually across undergraduate, postgraduate, and doctoral programmes. The college’s aphorism, VIDYA HI SEWA, reflects its commitment to serving knowledge through outreach experiences. It has served as a national template, guiding more than 200 schools and colleges in developing Home Science curricula, programmes, and infrastructure. With more than nine decades of heritage, the institution continues to lead in education, research, outreach, and women’s empowerment.",
+  "key_points": [
+    "Lady Irwin College is a constituent college for women under the University of Delhi, affiliated for undergraduate and postgraduate education in Home Science.",
+    "It was founded with just 11 students and now hosts over 1300 students annually across undergraduate, postgraduate, and doctoral programmes.",
+    "The college’s aphorism is VIDYA HI SEWA, emphasizing the importance of knowledge served through carefully designed outreach experiences.",
+    "It has guided more than 200 schools and colleges in developing Home Science curricula, programmes, and infrastructure, serving as a national template.",
+    "The institution is maintained by the Governing Body and UGC Grants, under the memorandum of association of The Lady Irwin College Society.",
+    "With more than nine decades of heritage, Lady Irwin College continues to lead in education, research, outreach, and women’s empowerment."
+  ],
+  "full_text": "Lady Irwin College is a constituent college for women, in the University of Delhi, under the memorandum of Association of The Lady Irwin College Society vide Regd. Society Registration Act 1860 (Punjab Amdmt.) 1957 Registration No.4163 (1969-70) \\u0026amp; maintained by the Governing Body \\u0026amp; UGC Grants. Lady Irwin College is a premiere institution affiliated to University of Delhi for Undergraduate and Postgraduate education in Home Science.\nThe Lady Irwin College aphorism is VIDYA HI SEWA. The teaching learning transactions true to the motto Endeavour to inculcate a sense of knowledge to serve through carefully designed outreach experiences. The College has always provided headship to other institutions in the nation in teaching, research and extension in Home Science.",
+  "language": "English",
+  "is_english": true,
+  "word_count": 117,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:56:48.061417+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/ug-admissions/",
+  "title": "UG Admissions - Lady Irwin College, Delhi",
+  "summary": "UG Admissions - Lady Irwin College, Delhi: Lady Irwin College in Delhi offers undergraduate admissions and provides essential information for prospective students. The page lists contact details, quick links for students, and the college’s operating hours from 9:30 am to 5:00 pm. It highlights the institution’s NAAC accreditation of A+ and its NIRF ranking of 31, indicating a strong academic reputation. Additional resources include admission enquiry forms, the Delhi University bulletin for UG admission 2026‑27, and a FAQ section for CSAS. The site is maintained by WhiteCode and encourages visitors to visit the campus for further details.",
+  "key_points": [
+    "Lady Irwin College, Delhi provides undergraduate admission information and contact details for prospective students.",
+    "The college operates from 9:30 am to 5:00 pm and offers quick links for student resources.",
+    "It holds an A+ accreditation from NAAC and ranks 31 in the NIRF rankings.",
+    "Admission enquiry forms and the Delhi University bulletin for UG admission 2026‑27 are available on the site.",
+    "A FAQ section for CSAS is provided to address common student questions.",
+    "The webpage is powered by WhiteCode and encourages visitors to visit the campus for more information."
+  ],
+  "full_text": "Under Graduate Admission Delhi University Bulletin UG admission 2026 -27 | FAQ-CSAS Sr. No. Name View 1 Admission Committee 2026-27 View 2 Courses and Eligibility 2026-27 View 3 Common Seat Allocation System (CSAS) 2026-27 (DU) View 4 Seat Matrix 2026-27 View",
+  "language": "English",
+  "is_english": true,
+  "word_count": 41,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:03:26.297005+00:00"
+}

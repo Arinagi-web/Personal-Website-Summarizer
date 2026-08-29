@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/library/",
+  "title": "Library - Lady Irwin College, Delhi",
+  "summary": "Library - Lady Irwin College, Delhi: The Lady Irwin College Library in Delhi serves undergraduate and postgraduate Home Science students and researchers, offering a specialized collection of over 58,000 published documents and more than 200 electronic items. Founded in the 1930s and housed in a dedicated building since 1958, the library was renovated in 2010 to incorporate modern ICT while preserving its heritage ambience. It is fully automated with Web Centric LIBSYS, provides 24/7 OPAC access, and uses barcode circulation. The library is a member of DELNET, DULS, and N‑List, granting users access to thousands of e‑journals, e‑books, and open‑access resources, and offers digitization, text‑to‑audio conversion, and language translation services. User education, orientation programs, and an attendance system further support library operations and user engagement.",
+  "key_points": [
+    "The library supports Home Science education and research with a specialized collection of more than 58,000 documents.",
+    "It was founded in the 1930s, occupies a separate building built in 1958, and was renovated in 2010 to meet modern ICT standards.",
+    "The library is fully automated using Web Centric LIBSYS, providing 24/7 OPAC access and barcode‑based circulation.",
+    "Membership in DELNET, DULS, and N‑List gives users access to over 90 subscribed databases, including major e‑journals and e‑books.",
+    "Digitization, text‑to‑audio conversion, and language translation of printed or handwritten materials are available through the KIBO device.",
+    "An attendance system records user footfall digitally, and the library offers orientation programs and user education to facilitate effective use of its resources."
+  ],
+  "full_text": "About\nLady Irwin College Library exists to support undergraduate and postgraduate teaching and research in the field of Home Science. Having a specialized collection in the area of Home Science and its allied areas, library pursues higher value of knowledge, creativity, wisdom and empowers its users to be connected with literature published/available in the field through its collection and networks. Founded in 1930's, today the library has grown into a separate building covering 500 sq. meters of area with one and a half-storey located in the premises of the college. This separate building was constructed in 1958.\nPhoto Gallery\nIn 2009–10, the library building was renovated with latest ICT requirements, retaining the ambience of its heritage structure and making it energy efficient. The renovated building was inaugurated on 13th April, 2010.\nThe Library is fully automated with –\n- Reading cum Conference Hall\n- Fiber Optic 24×7 connectivity\n- Wi-fi enabled building\n- Air Conditioned Conference Hall\n- E Resource Centre\n- Big Reading Hall\n- 120 seating capacity\n- Thesis and dissertation room\n- State-of-art library and information services conducive for academic enrichment as well as social and personal development of students, faculty and staff of the college;\n- Providing resources (printed and electronic) for the courses offered by the college;\n- Providing strong database for academics and research in field of Home Science and allied areas.\n- Online cyber linkage with worldwide national and international networks and universities and research institutions",
+  "language": "English",
+  "is_english": true,
+  "word_count": 243,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:58:51.509479+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/pg-admissions/",
+  "title": "PG Admission - Lady Irwin College, Delhi",
+  "summary": "PG Admission - Lady Irwin College, Delhi: Lady Irwin College, Delhi offers post‑graduate admission and provides essential contact information, quick links for students, and operational details. The college is part of the University of Delhi, holds an A+ NAAC accreditation, and ranks 31 in the NIRF list. Visitors can reach the admissions office by phone at 014836, and the office operates from 9:30 am to 5:00 pm. The site also displays a 2026 copyright notice and indicates it is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College is a constituent college of the University of Delhi that offers post‑graduate admission.",
+    "The college holds an A+ accreditation from NAAC and is ranked 31 in the NIRF rankings.",
+    "Contact details for the admissions office include the phone number 014836 and office hours from 9:30 am to 5:00 pm.",
+    "Quick links for students and site visitors are provided on the webpage.",
+    "The page displays a 2026 copyright notice and indicates it is powered by WhiteCode.",
+    "The college’s address and contact information are prominently listed for prospective applicants."
+  ],
+  "full_text": "Post Graduate Admission",
+  "language": "English",
+  "is_english": true,
+  "word_count": 3,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:00:54.114897+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/student-center/",
+  "title": "",
+  "summary": "404: The Enabling Center is a large semi‑open space with two big rooms, accessible toilets, and an open area for the student association. It serves as storage for 14 societies, holding items, instruments, costumes, and other materials needed throughout the year. The open layout makes it an ideal rehearsal space for performing arts, supporting both in‑house and outdoor events and competitions. Students frequently occupy the center, affectionately calling it the “students’ room,” where they bond and create memories that strengthen the campus community.",
+  "key_points": [
+    "The Enabling Center features two large rooms, accessible toilets, and an open area for the student association.",
+    "It is primarily used by 14 societies to store items, instruments, costumes, and other necessary materials.",
+    "The open structure provides an excellent rehearsal space for performing arts, supporting in‑house and outdoor events and competitions.",
+    "Students use the center regularly, making it a bustling hub of activity.",
+    "The center is affectionately known as the “students’ room” by the student body.",
+    "The shared use of the space helps students bond and create memories that contribute to a dynamic campus community."
+  ],
+  "full_text": "Enabling center is a huge multipurpose semi open space having 2 big rooms, toilets that can be used by differently abled students and an open space allocated to student association. The facility is primarily used by 14 societies of the association to store items, instruments, costumes and other necessary material required by them throughout the year. It is bustling with students at all times, and because of its open structure, it provides a great rehearsing space for performing arts for in-house and outdoor events and competitions. It is fondly called as students' room by the students as they bond here and create beautiful memories that contribute in the building of a dynamic student body in a campus.",
+  "language": "English",
+  "is_english": true,
+  "word_count": 117,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:02:35.743728+00:00"
+}

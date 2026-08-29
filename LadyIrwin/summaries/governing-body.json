@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/governing-body/",
+  "title": "Governing Body - Lady Irwin College, Delhi",
+  "summary": "Governing Body - Lady Irwin College, Delhi: The webpage provides contact and basic information for Lady Irwin College in Delhi, noting its affiliation with the University of Delhi. It highlights the college’s A+ accreditation by NAAC and its position at 31 in the NIRF rankings. Admission enquiries are available from 9:30 am to 5:00 pm, and the college’s phone number is listed as 014836. Quick links for students, college timing, and site visitors are included, and the site is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College is located in Delhi and is part of the University of Delhi.",
+    "The college holds an A+ accreditation from NAAC.",
+    "It ranks 31 in the NIRF rankings.",
+    "Admission enquiries can be made between 9:30 am and 5:00 pm.",
+    "The contact phone number for the college is 014836.",
+    "The website is powered by WhiteCode and includes quick links for students, college timing, and site visitors."
+  ],
+  "full_text": "Accordion\n| Sr. No. | Name | Designation | \n|---|---|---|\n| 1 | Prof. Sunaina Kanojia | Chairperson (DU Rep.) | \n| 2 | Prof. Mithun Kumar | Treasurer (DU Rep.) | \n| 3 | Prof. Manisha Choudhary | Member (DU Rep.) | \n| 4 | Prof. Haneet Gandhi | Member (DU Rep.) | \n| 5 | Prof. Neelima Asthana | Director & Member Secretary | \n| 6 | Prof. Manisha Sabharwal | Teachers' Representative | \n| 7 | Dr. Karan Sachdeva | Teachers' Representative | \n| 8 | Mr. Madan Kumar | Non-Teaching Representative | \nAccordion\n| Sr. No. | Name | View | \n|---|---|---|\n| 1 | Governing Body Minutes 20 March 2025 | View | \n| 2 | Governing Body Minutes 2 Jan. 2025 | View | \n| 3 | Governing Body Minutes 28 Nov. 2024 | View | \n| 4 | Governing Body Minutes 7 Nov. 2024 | View | \n| 5 | Governing Body Minutes 19 Oct. 2024 | View | \n| 6 | Governing Body Minutes 16 July 2024 | View |",
+  "language": "English",
+  "is_english": true,
+  "word_count": 178,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:56:30.681050+00:00"
+}

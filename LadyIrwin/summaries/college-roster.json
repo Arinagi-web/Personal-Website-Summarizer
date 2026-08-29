@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/college-roster/",
+  "title": "College Roster - Lady Irwin College, Delhi",
+  "summary": "College Roster - Lady Irwin College, Delhi: The webpage provides information about Lady Irwin College in Delhi, including its address, contact details, and quick links for students. It lists the college's operating hours from 9:30 am to 5:00 pm and a phone number (014836) for inquiries. The college is part of the University of Delhi, holds an A+ NAAC accreditation, and is ranked 31 in the NIRF rankings. Admission enquiries are directed to the provided contact. The page ends with a copyright notice for 2026 and a note that it is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College is located in Delhi and is affiliated with the University of Delhi.",
+    "The college’s contact phone number is 014836 and it operates from 9:30 am to 5:00 pm.",
+    "Quick links for students are provided on the webpage.",
+    "The college holds an A+ accreditation from NAAC.",
+    "It is ranked 31 in the NIRF rankings.",
+    "The page is copyrighted 2026 and powered by WhiteCode"
+  ],
+  "full_text": "| 1 | PwBD Roster Non-Teaching Roster 2025 | View | \n| 2 | Laboratory Assistant Non-Teaching Roster 2025 | View | \n| 3 | Non-Teaching Roster 2025 | View | \n| 4 | PwBD Teaching Roster 2022 | View | \n| 5 | Teaching Vacancies Roster 2022 | View | \n| 6 | PwD Non-Teaching Roster 2022 | View | \n| 7 | Laboratory Asst. Roster 2022 | View | \n| 8 | Technical Asst. Roster 2022 | View | \n| 9 | Non-Teaching Roster 2022 | View | \n| 10 | 200 points roster of Teaching 2019 | View | \n| 11 | Roster Teaching for PWD 2017 | View | \n| 12 | 200 points roster of teaching 2017 | View | \n| 13 | Roster Section Officer | View | \n| 14 | Roster Tech. Asst.2015 | View | \n| 15 | PwD roster (Teaching Staff) 2014 | View | \n| 16 | Roster of Laboratory Assistant 2014 | View | \n| 17 | Roster Senior Assistant & UDC | View | \n| 18 | Roster non teaching 2016 | View | \n| 19 | Roster teaching 2013 | View |",
+  "language": "English",
+  "is_english": true,
+  "word_count": 195,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:54:10.461710+00:00"
+}

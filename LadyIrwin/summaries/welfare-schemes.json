@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/welfare-schemes/",
+  "title": "Welfare Schemes - Lady Irwin College, Delhi",
+  "summary": "Welfare Schemes - Lady Irwin College, Delhi: Lady Irwin College, Delhi is a constituent institution of the University of Delhi, offering both teaching and non‑teaching student services. The college is accredited by NAAC with an A+ rating and ranks 31st in the NIRF national ranking. Contact details, quick links for students, and college timing information are provided on the site, with admission enquiries available from 9:30 am to 5:00 pm. The website is powered by WhiteCode and includes visitor and address information.",
+  "key_points": [
+    "Lady Irwin College is located in Delhi and is part of the University of Delhi.",
+    "The college holds an A+ accreditation from NAAC.",
+    "It is ranked 31st in the NIRF national ranking.",
+    "Admission enquiries can be made between 9:30 am and 5:00 pm.",
+    "The website offers quick links for students and provides contact information.",
+    "The site is powered by WhiteCode and includes visitor and college timing details."
+  ],
+  "full_text": "Teaching Non-Teaching Students",
+  "language": "English",
+  "is_english": true,
+  "word_count": 3,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:03:42.870194+00:00"
+}

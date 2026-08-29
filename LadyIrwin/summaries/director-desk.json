@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/director-desk/",
+  "title": "Director’s Desk - Lady Irwin College, Delhi",
+  "summary": "Director’s Desk - Lady Irwin College, Delhi: Lady Irwin College is a constituent college of the University of Delhi located in Delhi. It is accredited by NAAC with an A+ rating and holds a National Institutional Ranking Framework (NIRF) ranking of 31. The college can be contacted at 014836 and offers admission enquiries during its operating hours of 9:30 am to 5:00 pm. The website is powered by WhiteCode and the content is © 2026 Lady Irwin College, Delhi.",
+  "key_points": [
+    "Lady Irwin College is a constituent college of the University of Delhi in Delhi.",
+    "The college is accredited by NAAC with an A+ rating.",
+    "It holds a National Institutional Ranking Framework (NIRF) ranking of 31.",
+    "The college’s contact number is 014836.",
+    "Admission enquiries can be made during the college’s operating hours of 9:30 am to 5:00 pm.",
+    "The website is powered by WhiteCode and the content is © 2026 Lady Irwin College, Delhi."
+  ],
+  "full_text": "",
+  "language": "English",
+  "is_english": true,
+  "word_count": 0,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:55:37.483205+00:00"
+}

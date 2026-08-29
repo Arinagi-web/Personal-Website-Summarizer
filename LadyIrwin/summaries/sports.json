@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/sports/",
+  "title": "Sports - Lady Irwin College, Delhi",
+  "summary": "Sports - Lady Irwin College, Delhi: Lady Irwin College, Delhi is a constituent college of the University of Delhi, accredited by NAAC with an A+ rating and ranked 31 in the NIRF. The college offers various facilities and provides contact information, quick links for students, and details on college timing and admission enquiry. It is located in Delhi and is part of the University of Delhi system. The website includes sections such as About, Facilities, Address/Contacts, Quick Links, For Students, College Timing, and Site Visitors. The college operates from 9:30 am to 5:00 pm and is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College is a constituent college of the University of Delhi located in Delhi.",
+    "The college holds an A+ accreditation from NAAC and is ranked 31 in the NIRF rankings.",
+    "It offers a range of facilities and provides detailed contact information on its website.",
+    "Quick links for students and sections such as About, Facilities, and Address/Contacts are available on the site.",
+    "College timing is listed as 9:30 am to 5:00 pm, with an admission enquiry contact number of 014836.",
+    "The website is powered by WhiteCode and displays a copyright notice for 2026."
+  ],
+  "full_text": "About Facilities",
+  "language": "English",
+  "is_english": true,
+  "word_count": 2,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:02:18.690738+00:00"
+}

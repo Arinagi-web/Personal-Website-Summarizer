@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/teaching-staff/",
+  "title": "Teaching Staff - Lady Irwin College, Delhi",
+  "summary": "Teaching Staff - Lady Irwin College, Delhi: Lady Irwin College is a constituent college of the University of Delhi located in Delhi. The college offers a range of academic programs and is accredited with a NAAC A+ rating. It holds a National Institutional Ranking Framework (NIRF) position of 31 among Indian institutions. The campus is open to visitors and students from 9:30 am to 5:00 pm, and admission enquiries can be made via the provided contact number 014836.",
+  "key_points": [
+    "Lady Irwin College is part of the University of Delhi and is situated in Delhi.",
+    "The college has received a NAAC accreditation of A+.",
+    "It is ranked 31st in the NIRF national rankings.",
+    "The college’s official contact number is 014836.",
+    "Visitors and students can access the campus between 9:30 am and 5:00 pm.",
+    "Admission enquiries are available through the college’s contact information."
+  ],
+  "full_text": "Food & Nutrition and Food Technology Human Development and Childhood Studies (HDCS) Fabric and Apparel Science (FAS) Development Communication & Extension (DCE) Resource Management & Design Application (RMDA) Department of Education Department of Science Food & Nutrition and Food Technology ▼ Loading Faculty Data... Human Development and Childhood Studies (HDCS) ▼ Loading Faculty Data... Fabric and Apparel Science (FAS) ▼ Loading Faculty Data... Development Communication & Extension (DCE) ▼ Loading Faculty Data... Resource Management & Design Application (RMDA) ▼ Loading Faculty Data... Department of Education ▼ Loading Faculty Data... Department of Science ▼ Loading Faculty Data...",
+  "language": "English",
+  "is_english": true,
+  "word_count": 96,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:02:52.428596+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/lawns-of-the-college/",
+  "title": "Lawns - Lady Irwin College, Delhi",
+  "summary": "Lawns - Lady Irwin College, Delhi: The webpage provides information about Lady Irwin College in Delhi, highlighting its lawns and various resources such as a gallery and photo gallery. It offers contact details, quick links for students, and details on college timing and site visitor information. The college is part of the University of Delhi, holds an A+ NAAC accreditation, and is ranked 31 in the NIRF rankings. Visitors can inquire about admissions and plan visits, with the college open from 9:30 am to 5:00 pm.",
+  "key_points": [
+    "Lady Irwin College is located in Delhi and features lawns that are available for use.",
+    "The site includes a gallery and photo gallery showcasing campus life.",
+    "Contact information and quick links are provided for students and visitors.",
+    "College timing is listed as 9:30 am to 5:00 pm.",
+    "The college is part of the University of Delhi and holds an A+ NAAC accreditation.",
+    "It is ranked 31 in the NIRF rankings and offers admission enquiry services."
+  ],
+  "full_text": "About Lawns available at Lady Irwin College Sr. No. Name NO 1 Front lawn 1 2 Back Lawn/Sports Field 1 3 Director's Lawn (front)/ Rose Garden 1 4 Director's Lawn (Back) 1 5 PG Hostel Lawn 1 6 HDCS Department Lawn 1 7 DSA Lawn near Porta Cabin 1 8 Horticultural Field 1 9 Lawn Tennis 1 Gallery Photo Gallery Previous Next 1 2 3 4 5",
+  "language": "English",
+  "is_english": true,
+  "word_count": 67,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:58:17.670619+00:00"
+}

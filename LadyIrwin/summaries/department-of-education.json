@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/department-of-education/",
+  "title": "Department of Education - Lady Irwin College, Delhi",
+  "summary": "Department of Education - Lady Irwin College, Delhi: The webpage presents the Department of Education at Lady Irwin College in Delhi, a constituent of the University of Delhi. It highlights the college’s NAAC A+ accreditation and its 31st position in the NIRF ranking. The department’s office operates from 9:30 am to 5:00 pm and can be reached at the phone number 014836. No student testimonials are listed on the page. The site includes quick links for students and visitor information, and it is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College’s Department of Education is part of the University of Delhi.",
+    "The college holds a NAAC accreditation of A+.",
+    "It ranks 31st in the NIRF national ranking.",
+    "The department’s office hours are from 9:30 am to 5:00 pm.",
+    "Contact for admission enquiries can be made at 014836.",
+    "No testimonials are available on the webpage."
+  ],
+  "full_text": "Department of Department of Education Testimonials Overview Vision Mission Objectives NCTE & RCI Courses Offered Teaching Staff Non Teaching Staff Distinguished Alumnae Time Table Placements & Internships Attendance Annual Calendar Departmental Activities Research & Publication Awards, Honors & Recognitions Value Added Courses Capability Enhancement Programs Skill Development Courses Photo Gallery Research Publications Study Material Students Achievement Testimonials No testimonials available. Testimonials No testimonials available. Overview Vision Mission Objectives NCTE & RCI Courses Offered Teaching Staff Non Teaching Staff Distinguished Alumnae Time Table Placements & Internships Attendance Annual Calendar Departmental Activities Research & Publication Awards, Honors & Recognitions Value Added Courses Capability Enhancement Programs Skill Development Courses Photo Gallery Research Publications Study Material Students Achievement",
+  "language": "English",
+  "is_english": true,
+  "word_count": 114,
+  "extraction_method": "beautifulsoup",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:54:44.961476+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/reports/",
+  "title": "Reports - Lady Irwin College, Delhi",
+  "summary": "Reports - Lady Irwin College, Delhi: Lady Irwin College in Delhi is a constituent college of the University of Delhi that offers academic programs and services to students. The college is accredited with an A+ grade by NAAC and holds a National Institutional Ranking Framework (NIRF) position of 31. Its website provides essential information such as address, contacts, and quick links for students, along with operational hours from 9:30 am to 5:00 pm. Admission enquiries can be made through the site, and the page is powered by WhiteCode. The college’s online presence highlights its academic credentials and accessibility for prospective and current students.",
+  "key_points": [
+    "Lady Irwin College is part of the University of Delhi.",
+    "The college has received an A+ accreditation from NAAC.",
+    "It is ranked 31st in the NIRF rankings.",
+    "College hours are scheduled from 9:30 am to 5:00 pm.",
+    "The website offers address and contact details for visitors.",
+    "Quick links for students and an admission enquiry form are available on the site."
+  ],
+  "full_text": "2024-25 93rd Annual Report 2024-25 Annual Report PDF Document Download 2023-24 92वीं वार्षिक रिपोर्ट 2023-24 Annual Report PDF Document Download 2023-24 92nd Annual Report 2023-24 Annual Report PDF Document Download 2022-23 91st Annual Report 2022-23 Annual Report PDF Document Download 2021-22 90th Annual Report 2021-22 Annual Report PDF Document Download 2020-21 89th Annual Report 2020-21 Annual Report PDF Document Download 2019-20 88th Annual Report 2019-20 Annual Report PDF Document Download 2018-19 87th Annual Report 2018-19 Annual Report PDF Document Download 2017-18 86th Annual Report 2017-18 Annual Report PDF Document Download 2016-17 85th Annual Report 2016-17 Annual Report PDF Document Download 2015-16 84th Annual Report 2015-16 Annual Report PDF Document Download",
+  "language": "English",
+  "is_english": true,
+  "word_count": 110,
+  "extraction_method": "beautifulsoup",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:01:44.790458+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/ph-d-admissions/",
+  "title": "Ph. D. Admissions - Lady Irwin College, Delhi",
+  "summary": "Ph. D. Admissions - Lady Irwin College, Delhi: The page provides information about Ph.D. admissions at Lady Irwin College, Delhi. It lists contact details, quick links for students, college timing, and admission enquiry hours. The college is part of the University of Delhi, accredited by NAAC with an A+ rating and ranked 31 in NIRF. The page also includes a phone number and a note that the site is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College offers Ph.D. admissions in Delhi.",
+    "The contact phone number is 014836.",
+    "Quick links are available for students.",
+    "College timing is 9:30 am to 5:00 pm.",
+    "The college is accredited by NAAC with an A+ rating.",
+    "It holds a NIRF ranking of 31."
+  ],
+  "full_text": "Sr. No. Name View 1 Ph.D. Admissions Delhi University Bulletin 2025-26 View 2 Notice of Ph.D. Admission May 2025 View 3 Selection Committee Minutes (May 2025) View",
+  "language": "English",
+  "is_english": true,
+  "word_count": 27,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T06:01:10.720721+00:00"
+}

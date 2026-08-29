@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/canteen/",
+  "title": "",
+  "summary": "404: The canteen is located in the Students Centre and offers healthy, hygienic food at reasonable rates. It serves a wide range of snacks, meals, and beverages to students, faculty, staff, and guests during college hours. The facility includes a student-friendly hang‑out zone to encourage social interaction. Operations are overseen by a canteen committee to maintain high standards of hygiene and cleanliness.",
+  "key_points": [
+    "The canteen is housed within the Students Centre.",
+    "It provides healthy and hygienic food at reasonable rates.",
+    "The menu includes diverse and delicious snacks, meals, and beverages.",
+    "It operates during college hours for students, faculty, staff, and guests.",
+    "A student-friendly hang‑out zone is available for social interactions.",
+    "The canteen committee monitors operations to ensure high hygiene and cleanliness standards."
+  ],
+  "full_text": "404 Not Found The resource requested could not be found on this server! Return to Home",
+  "language": "English",
+  "is_english": true,
+  "word_count": 16,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:53:36.072755+00:00"
+}

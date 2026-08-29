@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/learning-spaces/",
+  "title": "",
+  "summary": "Special Facilities: Lady Irwin College (LIC) spans 16.5 acres in Lutyens Delhi, featuring heritage red‑brick buildings erected in 1932 by Sir Walter Sykes George. The campus prioritizes sustainability, with a green building audit showing extensive daylight use, natural ventilation, and abundant trees such as Areca Palm and Aloe Vera that improve air quality. LIC offers specialized facilities for early childhood education through the Rajkumari Amrit Kaur (RAK) Child Study Centre, including observation labs, a crèche, and early intervention services. Faculty and student support spaces are modern, Wi‑Fi enabled, and equipped with ICT infrastructure, while shared meeting areas like Ashiana and the amphitheatre host student union gatherings. The college also houses a library, a research laboratory, and a bookshop providing academic resources.",
+  "key_points": [
+    "The campus covers 16.5 acres and features heritage red‑brick buildings built in 1932 by Sir Walter Sykes George.",
+    "A green building audit confirms the use of daylight, natural ventilation, and extensive trees that improve air quality.",
+    "The Rajkumari Amrit Kaur Child Study Centre offers observation labs, a crèche, after‑school care, a play school, and early intervention therapies.",
+    "Faculty rooms are housed in a separate building with ICT facilities, a large reading room, 40 computer workstations, an intranet server, and fibre‑optic connectivity.",
+    "Shared faculty‑student spaces are Wi‑Fi enabled, furnished, and designed for personalized interaction.",
+    "Student meeting areas such as Ashiana, the hostel common room, campus lawns, and an amphitheatre host union meetings and general body meetings."
+  ],
+  "full_text": "Lady Irwin College is spread over 16.5 acres with red brick buildings amidst sprawling lawns and trees in Lutyens Delhi. Built in 1932 by Sir Walter Sykes George, the buildings are classified as heritage sites.\nConcerted efforts are being taken towards making LIC a green campus for which green building audit has been done which has indicated that the buildings on campus utilize plenty of daylight and natural ventilation for comfort and efficiency of users. There are large numbers of trees and lawns which add to improved quality of air and minimize air pollution on the campus. College has key plants that significantly help in improving quality of air such as Areca Palm, Money plant, Aloe Vera, Dracaena, Rubber plant, baobao tree, etc.\nA laboratory to conduct in-depth research on early childhood care and development by the Department of Human Development and Childhood Studies. RAK provides facilities such as observation labs, crèche, after-school care, play school, and early intervention (speech therapy, occupational therapy).\nHoused in a separate building equipped with the latest ICT requirements. It is fully automated, boasting a large reading room (used for seminars for 100 persons), INTERNET workstations with 40 computers, one INTRANET server, and Fibre Optic connectivity.\nShared by 2-4 faculty members, these spaces enable effective student-teacher interaction on a personalized basis. Most faculty rooms are Wi-Fi enabled and provided with appropriate furniture and storage facilities.\nIncludes students’ meeting spaces i.e., Ashiana, hostel common room, college lawns, and amphitheatre, where students meet for students’ union meetings, GBM, etc. The college bookshop provides stationery items along with textbooks.",
+  "language": "English",
+  "is_english": true,
+  "word_count": 261,
+  "extraction_method": "trafilatura",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:58:34.740772+00:00"
+}

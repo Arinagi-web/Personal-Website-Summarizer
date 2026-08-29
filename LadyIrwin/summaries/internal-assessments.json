@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/internal-assessments/",
+  "title": "Internal Assessments - Lady Irwin College, Delhi",
+  "summary": "Internal Assessments - Lady Irwin College, Delhi: The page lists internal assessment dates for Lady Irwin College, Delhi, covering semesters such as June 2025, December 2024, June 2024, December 2023, July 2023, and August 2023. It provides contact details, quick links for students, and college timing information. The college is part of the University of Delhi, holds NAAC A+ accreditation, and ranks 31 in the NIRF rankings. Admission enquiries can be made by calling 014836, and the office operates from 9:30 am to 5:00 pm. The page is powered by WhiteCode and notes that all rights are reserved for 2026.",
+  "key_points": [
+    "The internal assessment schedule includes dates for June 2025, December 2024, June 2024, December 2023, July 2023, and August 2023.",
+    "Contact information for the college is provided, including phone number 014836.",
+    "Quick links for students and site visitors are available on the page.",
+    "The college operates from 9:30 am to 5:00 pm.",
+    "Lady Irwin College is affiliated with the University of Delhi and holds NAAC A+ accreditation.",
+    "The college ranks 31 in the NIRF rankings."
+  ],
+  "full_text": "Undergraduate Postgraduate Undergraduate ▼ June 2025 December 2024 June 2024 December 2023 July 2023 Postgraduate ▼ June 2025 December 2024 June 2024 December 2023 August 2023",
+  "language": "English",
+  "is_english": true,
+  "word_count": 26,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:57:59.978168+00:00"
+}

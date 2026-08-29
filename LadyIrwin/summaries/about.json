@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000/about/",
+  "title": "About - Lady Irwin College, Delhi",
+  "summary": "About - Lady Irwin College, Delhi: Lady Irwin College is a constituent college of the University of Delhi located in Delhi. The college offers contact information, quick links for students, and details about its operating hours from 9:30 am to 5:00 pm. It holds an A+ accreditation from NAAC and is ranked 31st in the NIRF rankings. The college provides admission enquiry services and is powered by WhiteCode.",
+  "key_points": [
+    "Lady Irwin College is part of the University of Delhi and is situated in Delhi.",
+    "The college provides contact details and quick links specifically for students.",
+    "Operating hours for the college are from 9:30 am to 5:00 pm.",
+    "The college has received an A+ accreditation from NAAC.",
+    "It is ranked 31st in the NIRF rankings.",
+    "Admission enquiries can be made through the college's contact channels."
+  ],
+  "full_text": "",
+  "language": "English",
+  "is_english": true,
+  "word_count": 0,
+  "extraction_method": "failed",
+  "model_used": "groq",
+  "was_chunked": false,
+  "generated_at": "2026-08-29T05:52:28.958226+00:00"
+}
