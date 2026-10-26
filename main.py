@@ -14,7 +14,7 @@ from browser import fetch_with_browser
 
 
 def main() -> None:
-    """Run the summarizer from the command line."""
+    """Run the summarizer from the command"""
     
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8')
